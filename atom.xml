@@ -4,7 +4,7 @@
   <title><![CDATA[jesusOmar]]></title>
   <link href="http://jesusOmar.github.io/atom.xml" rel="self"/>
   <link href="http://jesusOmar.github.io/"/>
-  <updated>2013-07-12T15:24:05-04:00</updated>
+  <updated>2013-07-12T16:17:36-04:00</updated>
   <id>http://jesusOmar.github.io/</id>
   <author>
     <name><![CDATA[Jesus Omar Fernandez]]></name>
@@ -12,5 +12,70 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[This is how I work]]></title>
+    <link href="http://jesusOmar.github.io/blog/2013/07/10/this-is-how-i-work/"/>
+    <updated>2013-07-10T16:01:00-04:00</updated>
+    <id>http://jesusOmar.github.io/blog/2013/07/10/this-is-how-i-work</id>
+    <content type="html"><![CDATA[<p><img src="https://farm8.staticflickr.com/7405/9258148409_4426129151_o.jpg" alt="" /></p>
+
+<p>I honestly have no idea why I&rsquo;m writing this&hellip; Maybe years from now it would bring a good laugh; maybe it&rsquo;s a mental backup in case my computer crashes; or maybe is simply out of boredom.</p>
+
+<p>Hello, my name is Jesus Omar and this is how I work. A typical day for me begins at around 10:30 or 11:00 AM, when I usually wake up and jump into the shower. By 11:30 we usually have our first team meeting.</p>
+
+<p>After a few hours of catching up with the team and getting the priorities for the day, I open up my <a href="http://www.sublimetext.com/">sublime text</a> editor, start my local <a href="https://www.zend.com/en/products/server/">zend server</a> and start hacking away at some problem. This usually consists of searching <a href="https://duckduckgo.com/">DuckDuckGo</a> for a piece of code that might help my situation and or reading the documentation of <a href="http://symfony.com/">Symfony</a> to bend it to my will.</p>
+
+<p>After 2 or 3 hours of work I usually take a break to read <a href="https://news.ycombinator.com/">Hacker News</a> and <a href="http://www.theverge.com/">The Verge</a>, or watch one or two anime episodes on <a href="http://www.crunchyroll.com/">crunchyroll</a> before digging into either a new problem or going back to the previews one.</p>
+
+<p>This continues until I&rsquo;m either to exhausted to continue, or I have to leave the house. If I don&rsquo;t have anything plan then this means I&rsquo;m usually hacking away until 2 or 3 in the morning.</p>
+
+<p>Anyways as I said at the beginning I have no idea why I&rsquo;m writing all of this&hellip;. maybe is to remind me in the future on how hard I once worked.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[SVN Auto Update Bash script]]></title>
+    <link href="http://jesusOmar.github.io/blog/2013/07/07/svn-auto-update-bash-script/"/>
+    <updated>2013-07-07T16:03:00-04:00</updated>
+    <id>http://jesusOmar.github.io/blog/2013/07/07/svn-auto-update-bash-script</id>
+    <content type="html"><![CDATA[<div><script src='https://gist.github.com/5872501.js'></script>
+<noscript><pre><code></code></pre></noscript></div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to dump an object or array with Symfony’s Debug::dump]]></title>
+    <link href="http://jesusOmar.github.io/blog/2013/02/03/how-to-dump-an-object-or-array-with-symfonys-debug-dump/"/>
+    <updated>2013-02-03T15:52:00-05:00</updated>
+    <id>http://jesusOmar.github.io/blog/2013/02/03/how-to-dump-an-object-or-array-with-symfonys-debug-dump</id>
+    <content type="html"><![CDATA[<div><script src='https://gist.github.com/1403736.js'></script>
+<noscript><pre><code></code></pre></noscript></div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[My watchr scripts with growl notifications and custom images for php and python]]></title>
+    <link href="http://jesusOmar.github.io/blog/2011/08/14/my-watchr-scripts-with-growl-notifications-and-custom-images-for-php-and-python/"/>
+    <updated>2011-08-14T15:49:00-04:00</updated>
+    <id>http://jesusOmar.github.io/blog/2011/08/14/my-watchr-scripts-with-growl-notifications-and-custom-images-for-php-and-python</id>
+    <content type="html"><![CDATA[<div><script src='https://gist.github.com/1006857.js'></script>
+<noscript><pre><code></code></pre></noscript></div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Search and array in php]]></title>
+    <link href="http://jesusOmar.github.io/blog/2011/07/12/search-and-array-in-php/"/>
+    <updated>2011-07-12T15:32:00-04:00</updated>
+    <id>http://jesusOmar.github.io/blog/2011/07/12/search-and-array-in-php</id>
+    <content type="html"><![CDATA[<div><script src='https://gist.github.com/1001122.js'></script>
+<noscript><pre><code></code></pre></noscript></div>
+
+]]></content>
+  </entry>
   
 </feed>
