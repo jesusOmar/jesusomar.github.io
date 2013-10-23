@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[jesusOmar]]></title>
+  <link href="http://jesusOmar.github.io/atom.xml" rel="self"/>
+  <link href="http://jesusOmar.github.io/"/>
+  <updated>2013-10-23T12:14:45-04:00</updated>
+  <id>http://jesusOmar.github.io/</id>
+  <author>
+    <name><![CDATA[Jesus Omar Fernandez]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[This is how I work]]></title>
+    <link href="http://jesusOmar.github.io/blog/2013/07/10/this-is-how-i-work/"/>
+    <updated>2013-07-10T16:01:00-04:00</updated>
+    <id>http://jesusOmar.github.io/blog/2013/07/10/this-is-how-i-work</id>
+    <content type="html"><![CDATA[<p><img src="http://farm8.staticflickr.com/7405/9258148409_44acc767a7_o.jpg" alt="" /></p>
+
+<p>I honestly have no idea why I&rsquo;m writing this&hellip; Maybe years from now it would bring a good laugh; maybe it&rsquo;s a mental backup in case my computer crashes; or maybe is simply out of boredom.</p>
+
+<p>Hello, my name is Jesus Omar and this is how I work. A typical day for me begins at around 10:30 or 11:00 AM, when I usually wake up and jump into the shower. By 11:30 we usually have our first team meeting.</p>
+
+<p>After a few hours of catching up with the team and getting the priorities for the day, I open up my <a href="http://www.sublimetext.com/">sublime text</a> editor, start my local <a href="https://www.zend.com/en/products/server/">zend server</a> and start hacking away at some problem. This usually consists of searching <a href="https://duckduckgo.com/">DuckDuckGo</a> for a piece of code that might help my situation and or reading the documentation of <a href="http://symfony.com/">Symfony</a> to bend it to my will.</p>
+
+<p>After 2 or 3 hours of work I usually take a break to read <a href="https://news.ycombinator.com/">Hacker News</a> and <a href="http://www.theverge.com/">The Verge</a>, or watch one or two anime episodes on <a href="http://www.crunchyroll.com/">crunchyroll</a> before digging into either a new problem or going back to the previews one.</p>
+
+<p>This continues until I&rsquo;m either to exhausted to continue, or I have to leave the house. If I don&rsquo;t have anything plan then this means I&rsquo;m usually hacking away until 2 or 3 in the morning.</p>
+
+<p>Anyways as I said at the beginning I have no idea why I&rsquo;m writing all of this&hellip;. maybe is to remind me in the future on how hard I once worked.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[SVN Auto Update Bash script]]></title>
+    <link href="http://jesusOmar.github.io/blog/2013/07/07/svn-auto-update-bash-script/"/>
+    <updated>2013-07-07T16:03:00-04:00</updated>
+    <id>http://jesusOmar.github.io/blog/2013/07/07/svn-auto-update-bash-script</id>
+    <content type="html"><![CDATA[<div><script src='https://gist.github.com/5872501.js'></script>
+<noscript><pre><code>#!/bin/bash
+
+DOCUMENT_ROOT=/var/www/html/vhosts/dev.domain.com;
+ENV=dev;
+SVN_SERVER=https://subversion.assembla.com/svn/repo/trunk;
+SVN_USERNAME=username;
+SVN_PASSWORD=password;
+
+echo &quot;Changing directories to $DOCUMENT_ROOT...&quot;;
+cd $DOCUMENT_ROOT;
+
+# Check the servers revision number:
+echo &quot;Checking the server revision...&quot;;
+SERVER_REVISION=`svn info --username $SVN_USERNAME --password $SVN_PASSWORD $SVN_SERVER | grep Revision: | sed 's .\{10\}  '`;
+echo &quot;Server at revision $SERVER_REVISION&quot;;
+echo &quot;Checking the working copy revision...&quot;;
+LOCAL_REVISION=`svn info | grep Revision: | sed 's .\{10\}  '`;
+echo &quot;Working copy at revision $LOCAL_REVISION&quot;;
+
+if [[ &quot;$SERVER_REVISION&quot; == &quot;$LOCAL_REVISION&quot; ]]; then
+    echo &quot;Server is up to date. Nothing to do.&quot;;
+else
+    echo &quot;Running SVN update. Please wait...&quot;;
+    svn update --username $SVN_USERNAME --password $SVN_PASSWORD;
+    COMPOSER_CHANGED=`svn diff -r $LOCAL_REVISION:$SERVER_REVISION composer.lock`;
+    if [[ &quot;$COMPOSER_CHANGED&quot; == &quot;&quot; ]]; then
+        echo &quot;Vendors update not needed...&quot;;
+    else
+        echo &quot;Vendors needs updating...&quot;;
+        echo &quot;Running composer.phar install. This might take a minute or two...&quot;;
+        ./composer.phar install;
+    fi
+    echo &quot;Running assetic dump...&quot;;
+    ./app/console assetic:dump --env=$ENV --no-debug;
+
+    echo &quot;Installing assets...&quot;;
+    ./app/console assets:install --symlink;
+
+    echo &quot;Clearing the cache...&quot;;
+    ./app/console cache:clear --env=$ENV --no-debug;
+
+    echo &quot;Warming up the cache...&quot;;
+    ./app/console cache:warmup --env=$ENV --no-debug;
+
+    echo &quot;Fixing permissions...&quot;;
+    chown -R apache:apache ./app/cache ./app/logs/;
+    chmod -R 777 app/cache ./app/logs;
+
+    echo &quot;Checking for new migrations....&quot;;
+    NEW_MIGRATIONS=`svn diff -r $LOCAL_REVISION:$SERVER_REVISION app/DoctrineMigrations`;
+
+    if [[ &quot;$NEW_MIGRATIONS&quot; == &quot;&quot; ]]; then
+        echo &quot;Migration not needed...&quot;;
+    else
+        echo &quot;Running migrations...&quot;
+        echo Y | ./app/console doctrine:migration:migrate
+    fi
+fi
+
+echo &quot;Finished&quot;;
+
+exit</code></pre></noscript></div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to dump an object or array with Symfony’s Debug::dump]]></title>
+    <link href="http://jesusOmar.github.io/blog/2013/02/03/how-to-dump-an-object-or-array-with-symfonys-debug-dump/"/>
+    <updated>2013-02-03T15:52:00-05:00</updated>
+    <id>http://jesusOmar.github.io/blog/2013/02/03/how-to-dump-an-object-or-array-with-symfonys-debug-dump</id>
+    <content type="html"><![CDATA[<div><script src='https://gist.github.com/1403736.js'></script>
+<noscript><pre><code>&lt;?php
+    
+    \Doctrine\Common\Util\Debug::dump($value);</code></pre></noscript></div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[My watchr scripts with growl notifications and custom images for php and python]]></title>
+    <link href="http://jesusOmar.github.io/blog/2011/08/14/my-watchr-scripts-with-growl-notifications-and-custom-images-for-php-and-python/"/>
+    <updated>2011-08-14T15:49:00-04:00</updated>
+    <id>http://jesusOmar.github.io/blog/2011/08/14/my-watchr-scripts-with-growl-notifications-and-custom-images-for-php-and-python</id>
+    <content type="html"><![CDATA[<div><script src='https://gist.github.com/1006857.js'></script>
+<noscript><pre><code># Prereqs:
+# * Ruby
+# * gem install watchr
+# * growlnotify (http://growl.info/ = Extras folder from growl download.)
+
+# Usage:
+# put all your tests in a tests folder and call them anythingTest.php
+# run watchr watchr.rb
+
+watch('tests/.*Test\.php') do |md|
+  puts &quot;\e[H\e[2J&quot;  #clear console.
+  results = `phpunit #{md[0]}`
+  puts results  #full output to terminal.
+
+  #split the output into an array with the results.
+  message = results.split(&quot;\n&quot;).last(3);
+  title = message.find { |e| /FAILURES/ =~ e } ? &quot;FAILURES&quot; : &quot;PASS&quot;
+
+  #check if test pass or failed
+  if title == &quot;PASS&quot;
+    image = &quot;~/.watchr_images/passed.png&quot;
+  else
+    image = &quot;~/.watchr_images/failed.png&quot;
+  end
+
+  #get the summary of the results.
+  info = results.split(&quot;\n&quot;).last
+
+  #send a growl notification.
+  system(&quot;growlnotify --image '#{File.expand_path(image)}' -t '#{title}' -m '#{info}'&quot;)
+end</code></pre></noscript></div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Search and array in php]]></title>
+    <link href="http://jesusOmar.github.io/blog/2011/07/12/search-and-array-in-php/"/>
+    <updated>2011-07-12T15:32:00-04:00</updated>
+    <id>http://jesusOmar.github.io/blog/2011/07/12/search-and-array-in-php</id>
+    <content type="html"><![CDATA[<div><script src='https://gist.github.com/1001122.js'></script>
+<noscript><pre><code>&lt;?php
+private function _array_search($needle, $haystack) {
+    if (empty($needle) || empty($haystack)) {
+        return false;
+    }
+    foreach ($haystack as $key =&gt; $value) {
+        foreach ($needle as $nkey =&gt; $nvalue) {
+            if (!empty($value[$nkey]) &amp;&amp; $value[$nkey] == $nvalue) {
+                if($haystack[$key]['empid'] == $needle['empid'] &amp;&amp; $haystack[$key]['bdate'] == $needle['bdate']) {
+                    return $key;
+                }
+            }
+        }
+    }
+
+    return false;
+}</code></pre></noscript></div>
+
+]]></content>
+  </entry>
+  
+</feed>
