@@ -5,4 +5,6 @@ date: 2011-08-14 15:49
 comments: true
 categories:
 ---
+I use this to watch for file changes and automatically trigger tests.
+
 {% gist 1006857 %}

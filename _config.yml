@@ -16,6 +16,8 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://jesusomar.com" # the base hostname & protocol for your site
 twitter_username: jesusOmar
 github_username:  jesusOmar
+#base-font-family: "PT Serif","Georgia","Helvetica Neue",Arial,sans-serif
+paginate: 2
 
 # Build settings
 markdown: kramdown
@@ -23,3 +25,4 @@ markdown: kramdown
 # Gems
 gems:
   - jekyll-gist
+  - jekyll-paginate
