@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jesusOmar</title>
+    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</description>
+    <link>https://jesusomar.com/</link>
+    <atom:link href="https://jesusomar.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 08 Jun 2016 17:54:01 -0400</pubDate>
+    <lastBuildDate>Wed, 08 Jun 2016 17:54:01 -0400</lastBuildDate>
+    <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Welcome to Jekyll!</title>
+        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Tom&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 08 Jun 2016 16:09:20 -0400</pubDate>
+        <link>https://jesusomar.com/jekyll/update/2016/06/08/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">https://jesusomar.com/jekyll/update/2016/06/08/welcome-to-jekyll.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>This is how I work</title>
+        <description>&lt;p&gt;&lt;img src=&quot;http://farm8.staticflickr.com/7405/9258148409_44acc767a7_o.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I honestly have no idea why I’m writing this… Maybe years from now it would bring a good laugh; maybe it’s a mental backup in case my computer crashes; or maybe is simply out of boredom.&lt;/p&gt;
+
+&lt;p&gt;Hello, my name is Jesus Omar and this is how I work. A typical day for me begins at around 10:30 or 11:00 AM, when I usually wake up and jump into the shower. By 11:30 we usually have our first team meeting.&lt;/p&gt;
+
+&lt;p&gt;After a few hours of catching up with the team and getting the priorities for the day, I open up my &lt;a href=&quot;http://www.sublimetext.com/&quot;&gt;sublime text&lt;/a&gt; editor, start my local &lt;a href=&quot;https://www.zend.com/en/products/server/&quot;&gt;zend server&lt;/a&gt; and start hacking away at some problem. This usually consists of searching &lt;a href=&quot;https://duckduckgo.com/&quot;&gt;DuckDuckGo&lt;/a&gt; for a piece of code that might help my situation and or reading the documentation of &lt;a href=&quot;http://symfony.com/&quot;&gt;Symfony&lt;/a&gt; to bend it to my will.&lt;/p&gt;
+
+&lt;p&gt;After 2 or 3 hours of work I usually take a break to read &lt;a href=&quot;https://news.ycombinator.com/&quot;&gt;Hacker News&lt;/a&gt; and &lt;a href=&quot;http://www.theverge.com/&quot;&gt;The Verge&lt;/a&gt;, or watch one or two anime episodes on &lt;a href=&quot;http://www.crunchyroll.com/&quot;&gt;crunchyroll&lt;/a&gt; before digging into either a new problem or going back to the previews one.&lt;/p&gt;
+
+&lt;p&gt;This continues until I’m either to exhausted to continue, or I have to leave the house. If I don’t have anything plan then this means I’m usually hacking away until 2 or 3 in the morning.&lt;/p&gt;
+
+&lt;p&gt;Anyways as I said at the beginning I have no idea why I’m writing all of this…. maybe is to remind me in the future on how hard I once worked.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 10 Jul 2013 16:01:00 -0400</pubDate>
+        <link>https://jesusomar.com/2013/07/10/this-is-how-i-work.html</link>
+        <guid isPermaLink="true">https://jesusomar.com/2013/07/10/this-is-how-i-work.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>SVN Auto Update Bash script</title>
+        <description>&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/5872501.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Sun, 07 Jul 2013 16:03:00 -0400</pubDate>
+        <link>https://jesusomar.com/2013/07/07/svn-auto-update-bash-script.html</link>
+        <guid isPermaLink="true">https://jesusomar.com/2013/07/07/svn-auto-update-bash-script.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>How to dump an object or array with Symfony’s Debug::dump</title>
+        <description>&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/1403736.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Sun, 03 Feb 2013 15:52:00 -0500</pubDate>
+        <link>https://jesusomar.com/2013/02/03/how-to-dump-an-object-or-array-with-symfonys-debug-dump.html</link>
+        <guid isPermaLink="true">https://jesusomar.com/2013/02/03/how-to-dump-an-object-or-array-with-symfonys-debug-dump.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>My watchr scripts with growl notifications and custom images for php and python</title>
+        <description>&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/1006857.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Sun, 14 Aug 2011 15:49:00 -0400</pubDate>
+        <link>https://jesusomar.com/2011/08/14/my-watchr-scripts-with-growl-notifications-and-custom-images-for-php-and-python.html</link>
+        <guid isPermaLink="true">https://jesusomar.com/2011/08/14/my-watchr-scripts-with-growl-notifications-and-custom-images-for-php-and-python.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Search and array in php</title>
+        <description>&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/1001122.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Tue, 12 Jul 2011 15:32:00 -0400</pubDate>
+        <link>https://jesusomar.com/2011/07/12/search-and-array-in-php.html</link>
+        <guid isPermaLink="true">https://jesusomar.com/2011/07/12/search-and-array-in-php.html</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
