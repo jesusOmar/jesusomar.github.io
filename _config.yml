@@ -7,7 +7,9 @@
 
 # Site settings
 title: jesusOmar
-email: jesus.fndz@gmail.com
+main-title: jesus
+sub-title: Omar
+email: hello@jesusomar.com
 subtitle: Random thoughts of a code junkie.
 description: > # this means to ignore newlines until "baseurl:"
   Randome thoughts of a code junkie. Mainly php with Laravel and/or Symfony ramblings and me hating on Doctrine.
