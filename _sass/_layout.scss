@@ -2,7 +2,7 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
+    border-top: 5px solid $secondary-color;
     min-height: 56px;
 
     // Positioning context for the mobile navigation icon
@@ -21,6 +21,26 @@
     &:visited {
         color: $grey-color-dark;
     }
+}
+
+.site-title:hover {
+  text-decoration: none;
+}
+
+.main-title {
+  color: $main-color;
+}
+
+.sub-title {
+  color: $secondary-color;
+}
+
+a, a:visited {
+  color: $main-color;
+}
+
+a:hover {
+  color: $secondary-color;
 }
 
 .site-nav {
