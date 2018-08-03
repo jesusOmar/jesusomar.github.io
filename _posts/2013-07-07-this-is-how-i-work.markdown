@@ -5,7 +5,6 @@ date: 2013-07-10 16:01
 comments: true
 categories:
 ---
-![](http://farm8.staticflickr.com/7405/9258148409_44acc767a7_o.jpg)
 
 I honestly have no idea why I'm writing this... Maybe years from now it would bring a good laugh; maybe it's a mental backup in case my computer crashes; or maybe is simply out of boredom.
 
