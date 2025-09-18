@@ -19,3 +19,29 @@ setInterval(function () {
 function displayTime(time) {
     document.getElementById("time").innerHTML = time
 }
+
+// Theme toggle (no persistence)
+window.addEventListener('load', () => {
+    const modeBtn = document.getElementById('mode');
+    if (!modeBtn) return;
+
+    modeBtn.addEventListener('click', () => {
+        const b = document.body;
+
+        // If an explicit class is set, flip it
+        if (b.classList.contains('light')) {
+            b.classList.remove('light');
+            b.classList.add('dark');
+            return;
+        }
+        if (b.classList.contains('dark')) {
+            b.classList.remove('dark');
+            b.classList.add('light');
+            return;
+        }
+
+        // No explicit class yet: infer current system and switch to the opposite
+        const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+        b.classList.add(prefersLight ? 'dark' : 'light');
+    });
+});

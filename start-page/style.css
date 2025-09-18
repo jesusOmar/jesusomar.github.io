@@ -1,5 +1,5 @@
 body {
-    background-color: #f1f1f1;
+    background-color: #0C131F;
 }
 .info {
     display: flex;
@@ -42,7 +42,7 @@ hr {
     width: 500px;
 }
 a:visited, a:link, a:active {
-    color: #767283;
+    color: #bbb;
     text-decoration: none;
     font-size: 26px;
     text-indent: 2px;
@@ -53,7 +53,7 @@ a:hover {
 }
 #greeting {
     font-size: 32px;
-    color: #767283;
+    color: #dee3de;
 }
 #time {
     font-size: 28px;
@@ -150,16 +150,45 @@ a:hover {
     filter: invert(56%) sepia(45%) saturate(6917%) hue-rotate(173deg) brightness(96%) contrast(82%) !important
 }
 
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #0C131F;
+/* System preference: apply LIGHT **only** when no manual override class is present */
+@media (prefers-color-scheme: light) {
+    body:not(.dark):not(.light) {
+        background-color: #f1f1f1;
     }
+    body:not(.dark):not(.light) #greeting {
+        color: #767283;
+    }
+    body:not(.dark):not(.light) a,
+    body:not(.dark):not(.light) a:visited,
+    body:not(.dark):not(.light) a:link,
+    body:not(.dark):not(.light) a:active {
+        color: #767283;
+    }
+}
 
-    #greeting {
-        color: #dee3de;
-    }
+/* Manual overrides (toggled via the #mode button) */
+body.light {
+    background-color: #f1f1f1;
+}
+body.light #greeting {
+    color: #767283;
+}
+body.light a,
+body.light a:visited,
+body.light a:link,
+body.light a:active {
+    color: #767283;
+}
 
-    a {
-        color: #bbb;
-    }
+body.dark {
+    background-color: #0C131F;
+}
+body.dark #greeting {
+    color: #dee3de;
+}
+body.dark a,
+body.dark a:visited,
+body.dark a:link,
+body.dark a:active {
+    color: #bbb;
 }
