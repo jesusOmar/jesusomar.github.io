@@ -151,7 +151,7 @@ a:hover {
 }
 
 /* System preference: apply LIGHT **only** when no manual override class is present */
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
     body:not(.dark):not(.light) {
         background-color: #f1f1f1;
     }
@@ -164,7 +164,7 @@ a:hover {
     body:not(.dark):not(.light) a:active {
         color: #767283;
     }
-}
+} */
 
 /* Manual overrides (toggled via the #mode button) */
 body.light {
